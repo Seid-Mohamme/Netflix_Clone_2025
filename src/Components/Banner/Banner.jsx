@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "../../Utils/axios";
 import requests from "../../Utils/Requests";
 import styles from "./banner.module.css";
@@ -22,7 +22,7 @@ const Banner = () => {
     })();
   }, []);
   function truncate(str, n) {
-    return str?.length > n ? str.substr(0, n - 1) * "..." : str;
+    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
   return (
     <div
